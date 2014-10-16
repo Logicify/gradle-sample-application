@@ -5,5 +5,7 @@
 </description>
   <documentation>http://grails.org/plugin/gtp-domain</documentation>
   <type>GtpDomainGrailsPlugin</type>
-  <resources />
+  <resources>
+    <resource>com.logicify.demo.gtp.domain.Book</resource>
+  </resources>
 </plugin>
