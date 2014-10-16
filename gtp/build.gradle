@@ -12,6 +12,15 @@ subprojects {
 
     apply plugin: "grails"
 
+    buildscript {
+        repositories {
+            jcenter()
+        }
+        dependencies {
+            classpath "org.grails:grails-gradle-plugin:2.1.0"
+        }
+    }
+
     grails {
         grailsVersion = '2.4.3'
         groovyVersion = '2.3.7'

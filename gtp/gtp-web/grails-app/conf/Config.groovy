@@ -41,6 +41,8 @@ grails.views.default.codec = "html"
 // If unspecified, controllers are prototype scoped.
 grails.controllers.defaultScope = 'singleton'
 
+grails.plugin.springsecurity.password.algorithm='bcrypt'
+
 // GSP settings
 grails {
     views {
@@ -84,6 +86,7 @@ grails.hibernate.cache.queries = false
 grails.hibernate.pass.readonly = false
 // configure passing read-only to OSIV session by default, requires "singleSession = false" OSIV mode
 grails.hibernate.osiv.readonly = false
+
 
 environments {
     development {

@@ -1,20 +1,4 @@
-buildscript {
-  repositories {
-    jcenter()
-  }
-  dependencies {
-    classpath "org.grails:grails-gradle-plugin:2.1.0"
-  }
-}
-
 version "0.1"
-group "com.logicify.demo"
-
-apply plugin: "grails"
-
-repositories {
-  grails.central() //creates a maven repo for the Grails Central repository (Core libraries and plugins)
-}
 
 configurations {
     all*.exclude module: "xml-apis"
@@ -28,6 +12,7 @@ dependencies {
     compile "org.grails.plugins:scaffolding:2.1.2"
     compile 'org.grails.plugins:cache:1.1.7'
     compile "org.grails.plugins:asset-pipeline:1.9.6"
+    compile "org.grails.plugins:spring-security-core:2.0-RC4"
     compile "javax.servlet:javax.servlet-api:3.1.0"
 
     // plugins needed at runtime but not for compilation
