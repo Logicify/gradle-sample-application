@@ -1,0 +1,44 @@
+buildscript {
+  repositories {
+    jcenter()
+  }
+  dependencies {
+    classpath "org.grails:grails-gradle-plugin:2.1.0"
+  }
+}
+
+version "0.1"
+group "com.logicify.demo"
+
+apply plugin: "grails"
+
+repositories {
+  grails.central() //creates a maven repo for the Grails Central repository (Core libraries and plugins)
+}
+
+//grails {
+//  grailsVersion = '2.4.3'
+//  groovyVersion = '2.3.7'
+//  springLoadedVersion '1.1.3'
+//}
+
+configurations {
+    all*.exclude module: "xml-apis"
+    all*.exclude module: "commons-digester"
+}
+
+dependencies {
+    //bootstrap "org.grails.plugins:tomcat:7.0.54" // No container is deployed by default, so add this
+    test "org.grails:grails-datastore-test-support:1.0-grails-2.4"
+    compile 'org.grails.plugins:resources:1.2.13' // Just an example of adding a Grails plugin
+    compile "org.grails.plugins:scaffolding:2.1.2"
+    compile 'org.grails.plugins:cache:1.1.7'
+    compile "org.grails.plugins:asset-pipeline:1.9.6"
+    compile "javax.servlet:javax.servlet-api:3.1.0"
+
+    // plugins needed at runtime but not for compilation
+    runtime "org.grails.plugins:hibernate4:4.3.5.5" // or ":hibernate:3.6.10.17"
+    runtime "org.grails.plugins:database-migration:1.4.0"
+    runtime "org.grails.plugins:jquery:1.11.1"
+    compile project(':gtp-domain')
+}

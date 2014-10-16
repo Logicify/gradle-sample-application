@@ -27,4 +27,9 @@
 /web-app/plugins
 
 # "temporary" build files
-/target
+/**/target
+.idea
+gradle
+/gtp/gtp
+*.iml
+/**/buildPlugins

@@ -1,0 +1,9 @@
+<plugin name='gtp-domain' version='0.1' grailsVersion='2.4 &gt; *'>
+  <author>Your name</author>
+  <title>Gtp Domain Plugin</title>
+  <description>Brief summary/description of the plugin.
+</description>
+  <documentation>http://grails.org/plugin/gtp-domain</documentation>
+  <type>GtpDomainGrailsPlugin</type>
+  <resources />
+</plugin>
