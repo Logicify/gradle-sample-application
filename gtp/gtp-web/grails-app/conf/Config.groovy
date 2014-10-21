@@ -120,7 +120,7 @@ log4j.main = {
 }
 
 
-// Added by the Spring Security Core plugin:
+// Spring Security Core settings:
 grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.logicify.demo.gtp.domain.User'
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'com.logicify.demo.gtp.domain.UserRole'
 grails.plugin.springsecurity.authority.className = 'com.logicify.demo.gtp.domain.Role'
