@@ -1,4 +1,3 @@
-import com.logicify.demo.gtp.domain.Book
 import com.logicify.demo.gtp.domain.Role
 import com.logicify.demo.gtp.domain.User
 import com.logicify.demo.gtp.domain.UserRole

@@ -19,6 +19,8 @@ gradle grails-s2-quickstart -PgrailsArgs="--uiOnly"
 
 2) Usefull commands
 
+NOTE: Folowing commands should be run from gtp-web/ dir or prefixed by "gtp-web:" like ```gradle gtp-web:run``` if you whould like to run from root (gtp dir).
+
 gradle clean - remove all temp files
 gradle build - compile project
 gradle war - compile and prepare WAR file
