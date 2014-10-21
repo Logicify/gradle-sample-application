@@ -7,6 +7,5 @@
   <type>GtpDomainGrailsPlugin</type>
   <resources>
     <resource>com.logicify.demo.gtp.domain.Book</resource>
-    <resource>domain.User</resource>
   </resources>
 </plugin>
