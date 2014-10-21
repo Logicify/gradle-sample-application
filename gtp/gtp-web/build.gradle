@@ -13,6 +13,7 @@ dependencies {
     compile "org.grails.plugins:scaffolding:2.1.2"
     compile 'org.grails.plugins:cache:1.1.7'
     compile "org.grails.plugins:asset-pipeline:1.9.6"
+    compile "org.grails.plugins:less-asset-pipeline:1.10.0"
     compile "org.grails.plugins:spring-security-core:2.0-RC4"
     compile "javax.servlet:javax.servlet-api:3.1.0"
     compile "net.sf.ehcache:ehcache-core:2.4.8"
