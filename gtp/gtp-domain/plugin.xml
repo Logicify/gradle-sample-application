@@ -6,6 +6,11 @@
   <documentation>http://grails.org/plugin/gtp-domain</documentation>
   <type>GtpDomainGrailsPlugin</type>
   <resources>
-
+    <resource>com.logicify.demo.gtp.domain.Role</resource>
+    <resource>com.logicify.demo.gtp.domain.User</resource>
+    <resource>com.logicify.demo.gtp.domain.UserRole</resource>
+    <resource>changelog</resource>
+    <resource>renamed-password-field</resource>
+    <resource>user-and-role</resource>
   </resources>
 </plugin>

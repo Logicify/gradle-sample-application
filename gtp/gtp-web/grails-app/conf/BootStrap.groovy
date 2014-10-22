@@ -7,9 +7,9 @@ class BootStrap {
     def init = { servletContext ->
         // Sample users
         def sampleUserDetails = [
-                'user': [ fullName: 'User 1', email: 'user1@mymail.com', password: 'demo'],
-                'user2': [ fullName: 'User 2', email: 'user2@mymail.com', password: 'demo'],
-                'admin': [ fullName: 'Admin User', email: 'adminuser@mymail.com', password: 'admin'],
+                'user': [ fullName: 'User 1', email: 'user1@mymail.com', password: 'demo', isAdmin: false],
+                'user2': [ fullName: 'User 2', email: 'user2@mymail.com', password: 'demo', isAdmin: false],
+                'admin': [ fullName: 'Admin User', email: 'adminuser@mymail.com', password: 'admin', isAdmin: true],
         ]
         // Creating roles if needed
         def userRole = Role.findByAuthority(Role.ROLE_USER) ?: new Role(authority: Role.ROLE_USER).save(flash: true);
@@ -27,7 +27,7 @@ class BootStrap {
                     user.save()
                 }
                 // Assign role
-                UserRole.create(user, userDetails.containsKey('isAdmin') && userDetails.isAdmin ? adminRole : userRole);
+                UserRole.create(user, userDetails.isAdmin ? adminRole : userRole);
             }
         }
     }
