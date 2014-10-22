@@ -130,6 +130,11 @@ grails.plugins.twitterbootstrap.fixtaglib = true
 grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.logicify.demo.gtp.domain.User'
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'com.logicify.demo.gtp.domain.UserRole'
 grails.plugin.springsecurity.authority.className = 'com.logicify.demo.gtp.domain.Role'
+grails.plugin.springsecurity.apf.filterProcessesUrl = '/auth/dologin'
+grails.plugin.springsecurity.failureHandler.defaultFailureUrl = '/auth/loginfailed'
+grails.plugin.springsecurity.auth.loginFormUrl = '/auth/login'
+grails.plugin.springsecurity.logout.filterProcessesUrl = '/auth/dologout'
+
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/assets/**':                     ['permitAll'],
 	'/**/js/**':                      ['permitAll'],

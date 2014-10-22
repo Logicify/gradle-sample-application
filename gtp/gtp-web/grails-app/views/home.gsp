@@ -8,5 +8,9 @@
         <p class="lead">
             <a href="#" class="btn btn-lg btn-default">Learn more</a>
         </p>
+        <p></p>
+        <p>This is an example of reusable component. There is only one component which is able to render fully
+        functional login form. It is used here on home page and on separate <g:link controller="auth" action="login">login page</g:link>.</p>
+        <frm:loginForm/>
     </content>
 </g:applyLayout>
