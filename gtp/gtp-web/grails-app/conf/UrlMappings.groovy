@@ -6,8 +6,10 @@ class UrlMappings {
                 // apply constraints here
             }
         }
-        "/"(controller: 'homePage')
-        "/dev/appInfo"(view:"/dev/appInfo")
-        "500"(view:'/error')
+        name home: "/" (controller: 'homePage')
+
+        name twoColExamplePage: "/example2colpage"(view: 'exampleToCol')
+        name devPage: "/dev/appInfo"(view:"/dev/appInfo")
+        "500"(view:'/dev/error')
 	}
 }

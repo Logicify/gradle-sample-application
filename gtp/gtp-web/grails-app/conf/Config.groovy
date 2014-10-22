@@ -124,18 +124,18 @@ log4j.main = {
 
 grails.assets.plugin."twitter-bootstrap".excludes = ["**/*.less"]
 grails.assets.plugin."twitter-bootstrap".includes = ["bootstrap.less"]
+grails.plugins.twitterbootstrap.fixtaglib = true
 
 // Spring Security Core settings:
 grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.logicify.demo.gtp.domain.User'
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'com.logicify.demo.gtp.domain.UserRole'
 grails.plugin.springsecurity.authority.className = 'com.logicify.demo.gtp.domain.Role'
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
-	'/':                              ['permitAll'],
-	'/index':                         ['permitAll'],
 	'/assets/**':                     ['permitAll'],
 	'/**/js/**':                      ['permitAll'],
 	'/**/css/**':                     ['permitAll'],
 	'/**/images/**':                  ['permitAll'],
 	'/**/favicon.ico':                ['permitAll'],
     '/dev/**':                        ['ROLE_ADMIN'],
+    '/**':                            ['permitAll'],
 ]
