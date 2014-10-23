@@ -1,7 +1,9 @@
 package com.logicify.demo.gtp.domain
 
+import grails.persistence.Entity
 import org.apache.commons.lang.builder.HashCodeBuilder
 
+@Entity
 class UserRole implements Serializable {
 
 	private static final long serialVersionUID = 1

@@ -1,5 +1,8 @@
 package com.logicify.demo.gtp.domain
 
+import grails.persistence.Entity
+
+@Entity
 class User {
 
 	transient springSecurityService
@@ -14,7 +17,7 @@ class User {
 	static transients = ['springSecurityService']
 
 	static constraints = {
-		username blank: false, unique: true
+		username size: 5..40, blank: false, unique: true
 		password blank: false
 	}
 

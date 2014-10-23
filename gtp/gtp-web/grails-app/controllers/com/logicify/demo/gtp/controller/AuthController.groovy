@@ -1,5 +1,6 @@
 package com.logicify.demo.gtp.controller
 
+import com.logicify.demo.gtp.webdomain.SignupFormModel
 import grails.converters.JSON
 import grails.plugin.springsecurity.SpringSecurityUtils
 import org.springframework.security.access.annotation.Secured
@@ -8,6 +9,8 @@ import org.springframework.security.authentication.CredentialsExpiredException
 import org.springframework.security.authentication.DisabledException
 import org.springframework.security.authentication.LockedException
 import org.springframework.security.web.WebAttributes
+import org.springframework.web.bind.annotation.RequestMapping
+import org.springframework.web.bind.annotation.RequestMethod
 
 import javax.servlet.http.HttpServletResponse
 
@@ -25,6 +28,20 @@ class AuthController {
     def logout() {
         // TODO put any pre-logout code here
         redirect uri: SpringSecurityUtils.securityConfig.logout.filterProcessesUrl
+    }
+
+    def signup() {
+        if (!request.post) {
+            return render(view: '/signup')
+        } else {
+            SignupFormModel signupFormModel = new SignupFormModel()
+            bindData(signupFormModel, params)
+            if (!signupFormModel.validate()) {
+                return render(view: '/signup', model:[signupFormModel: signupFormModel])
+            } else {
+                return render('VALIDATED!')
+            }
+        }
     }
 
     /**

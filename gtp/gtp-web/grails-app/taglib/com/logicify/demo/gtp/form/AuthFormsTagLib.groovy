@@ -1,5 +1,6 @@
 package com.logicify.demo.gtp.form
 
+import com.logicify.demo.gtp.webdomain.SignupFormModel
 import grails.plugin.springsecurity.SpringSecurityUtils
 
 /**
@@ -7,10 +8,6 @@ import grails.plugin.springsecurity.SpringSecurityUtils
  */
 class AuthFormsTagLib {
     static namespace = "frm"
-
-    def signupForm = { attrs ->
-        out << render(template: '/forms/auth/signup')
-    }
 
     def loginForm = { attrs ->
         def config = SpringSecurityUtils.securityConfig
@@ -20,5 +17,10 @@ class AuthFormsTagLib {
                 model: [postUrl            : "${request.contextPath}${config.apf.filterProcessesUrl}",
                         rememberMeParameter: config.rememberMe.parameter]
         )
+    }
+
+    def signupForm = { attrs ->
+        SignupFormModel model = attrs.model ?: new SignupFormModel()
+        out << render(template: '/forms/auth/signup', model:[signupFormModel:model])
     }
 }
