@@ -1,1 +1,1 @@
-include "gtp-domain", "gtp-service", "gtp-web"
+include "gtp-domain", "gtp-service", "gtp-web", "gtp-worker"
