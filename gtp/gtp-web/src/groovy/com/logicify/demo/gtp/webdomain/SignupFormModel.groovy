@@ -7,7 +7,7 @@ import grails.validation.Validateable
  * Created by LOGICIFY\corvis on 10/23/14.
  */
 @Validateable
-class SignupFormModel {
+class SignupFormModel implements Serializable {
     def username;
     def password;
     def repeatPassword;
@@ -15,7 +15,7 @@ class SignupFormModel {
     static constraints = {
         importFrom User
         repeatPassword validator: {val, obj, errors ->
-            if (!val == obj.password) errors.rejectValue('repeatPassword', 'noMatch')
+            if (val != obj.password) errors.rejectValue('repeatPassword', 'noMatch')
         }
     }
 }
