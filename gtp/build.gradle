@@ -3,6 +3,7 @@ buildscript {
         jcenter()
     }
     dependencies {
+        //classpath 'com.connorgarvey.gradle:gradle-grails-wrapper:1.0'
         classpath "org.grails:grails-gradle-plugin:2.1.0"
     }
 }
@@ -31,4 +32,15 @@ subprojects {
         grails.central() //creates a maven repo for the Grails Central repository (Core libraries and plugins)
         mavenCentral()
     }
+
+    // Heroku calls this task to stage the deployment
+    task stage(dependsOn: ['package'], type: Delete) {
+
+        // Remove the lib dir for now as this takes up unecesary slug space on Heroku
+        delete 'lib'
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.0'
 }

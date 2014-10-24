@@ -8,6 +8,7 @@ import grails.util.Holders
  */
 class UserService {
 
+
     def getAllRegisteredUsers () {
         return User.findAll()
     }
