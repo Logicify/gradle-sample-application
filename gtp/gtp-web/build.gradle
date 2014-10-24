@@ -27,7 +27,6 @@ dependencies {
     runtime "org.grails.plugins:jquery:1.11.1"
     runtime "org.grails.plugins:twitter-bootstrap:3.2.0.2"
 
-    compile project(':gtp-domain')
     compile project(':gtp-service')
 }
 
