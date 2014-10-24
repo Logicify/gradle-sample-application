@@ -39,7 +39,7 @@ task wrapper(type: Wrapper) {
 }
 
 // Heroku calls this task to stage the deployment
-task stage(dependsOn: ['gtp-web:clean', 'gtp-web:war'], skip: ['test'], type: Delete) {
+task stage(dependsOn: ['gtp-web:clean', 'gtp-web:war'], type: Delete) {
     // Remove the lib dir for now as this takes up unecesary slug space on Heroku
     delete 'lib'
 }
