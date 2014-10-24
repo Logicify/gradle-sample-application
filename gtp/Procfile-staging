@@ -1,1 +1,0 @@
-web: sh ./gradlew gtp-web:run -x test
