@@ -11,7 +11,6 @@ dependencies {
     //bootstrap "org.grails.plugins:tomcat:7.0.54" // No container is deployed by default, so add this
     bootstrap "org.grails.plugins:jetty:2.0.3"
     test "org.grails:grails-datastore-test-support:1.0-grails-2.4"
-    compile 'org.grails.plugins:resources:1.2.13' // Just an example of adding a Grails plugin
     compile "org.grails.plugins:scaffolding:2.1.2"
     compile 'org.grails.plugins:cache:1.1.7'
     compile "org.grails.plugins:asset-pipeline:1.9.6"

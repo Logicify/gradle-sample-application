@@ -18,8 +18,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <g:layoutHead/>
-    <r:require modules="bootstrap-js" />
-    <r:layoutResources/>
+    <asset:javascript src="application.js" />
 </head>
 <body>
 <div class="site-wrapper">
@@ -49,6 +48,5 @@
 
 </div>
 <div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
-<r:layoutResources/>
 </body>
 </html>

@@ -6,6 +6,7 @@
 // to create separate JavaScript files as needed.
 //
 //= require jquery
+//= require bootstrap-js
 //= require_tree .
 //= require_self
 
