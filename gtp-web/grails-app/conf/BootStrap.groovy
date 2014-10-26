@@ -24,10 +24,10 @@ class BootStrap {
                 )
                 if (user.validate()) {
                     println("Creating sample user: ${user.username} with password ${user.password}")
-                    user.save()
+                    user.save(flush:true)
+                    // Assign role
+                    UserRole.create(user, userDetails.isAdmin ? adminRole : userRole, true);
                 }
-                // Assign role
-                UserRole.create(user, userDetails.isAdmin ? adminRole : userRole);
             }
         }
     }
